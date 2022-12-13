@@ -7,3 +7,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 
 text = pytesseract.image_to_string(img, lang='rus')
 print(text)
+
+file_name = img.filename
+with open(f'{file_name}.txt', 'w') as text_file:
+    text_file.write(text)
